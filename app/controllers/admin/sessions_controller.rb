@@ -5,7 +5,7 @@ class Admin::SessionsController < ApplicationController
   end
 
   def create
-    @admin = Admin.where(:username params[:username]).first
+    @admin = Admin.where(username: params[:username]).first
       if @admin.present? && @admin.authenticate(params[:password])
         session[:admin_id] = @admin.id
         flash[:notice] = 'Welcome!'
