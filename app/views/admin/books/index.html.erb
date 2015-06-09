@@ -1,11 +1,9 @@
-<%= link_to("Add new book", new_admin_book_path) %>
-
 <ul>
   <% @books.each do |book| %>
     <li>
-      <%= book.title %>
-      <%= book.genre %>
-      <%= book.author %>
+      <%= book.title %>,
+      <%= book.genre %>, 
+      <%= book.author %>,
       <%= book.date_published %>
       <%= link_to('delete this book', admin_book_path(book.id), method: :delete) %>
     </li>

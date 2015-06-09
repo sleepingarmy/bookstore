@@ -10,11 +10,8 @@
 	<%= f.text_field(:genre)%> 
 <br>
 	<%= f.label(:date_published)%> 
-	<%= f.text_field(:date_published)%> 
+	<%= f.date_select(:date_published)%> 
 
 	<%= f.submit("save") %> 
 <% end %>
-
-<br>
-<%= link_to("View all books", admin_books_path)%>
 

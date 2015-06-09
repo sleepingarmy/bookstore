@@ -7,7 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<header>
+		<a href="<%= admin_books_path %>">Index</a>
+		<a href="<%= new_admin_book_path %>">Add new book</a>
+	</header>
 <%= yield %>
 
 </body>
