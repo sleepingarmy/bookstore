@@ -1,1 +1,6 @@
-new.html.erb
+<h1>Admin Login</h1>
+<%= form_tag(admin_login_path) do %>
+	<p> Username: <%= text_field_tag(:username) %></p>
+	<p> Password: <%= text_field_tag(:Password) %></p>
+	<p> <%= submit_tag('Login')%></p>
+<% end %>
