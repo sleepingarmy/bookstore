@@ -44,7 +44,7 @@ class Admin::BooksController < ApplicationController
 
   #strong params
   def book_params
-    params.require(:book).permit(:bathrooms, :bedrooms, :sq_footage, :street, :city, :state, :zipcode, :price)
+    params.require(:book).permit(:title, :genre, :author, :date_published)
   end
 
   def find_book
