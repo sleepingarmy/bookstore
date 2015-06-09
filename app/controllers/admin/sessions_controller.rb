@@ -11,8 +11,9 @@ class Admin::SessionsController < ApplicationController
         flash[:notice] = 'Welcome!'
         redirect_to admin_path
       else
-        flash[:alert] 'Oops, you entered the wrong username or password. wah wah.'
+        flash[:alert] = 'Oops, you entered the wrong username or password. wah wah.'
         render :new
+      end
   end
 
   def destroy
