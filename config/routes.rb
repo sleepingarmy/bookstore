@@ -4,4 +4,6 @@ Rails.application.routes.draw do
     get '/' => 'base#index'
     resources :books
   end
+
+  	root 'public#index'
 end
