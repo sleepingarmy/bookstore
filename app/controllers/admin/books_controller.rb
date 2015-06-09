@@ -1,5 +1,6 @@
 class Admin::BooksController < ApplicationController
   before_action :find_book, only: [:edit, :show, :update, :destroy]
+  before_action :authenticate_admin
 
   def index #get - make a view file
     @books = Book.all
