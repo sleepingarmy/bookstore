@@ -6,14 +6,14 @@ class Admin::SessionsController < ApplicationController
 
   def create
     @admin = Admin.where(username: params[:username]).first
-      if @admin.present? && @admin.authenticate(params[:password])
-        session[:admin_id] = @admin.id
-        flash[:notice] = 'Welcome!'
-        redirect_to admin_path
-      else
-        flash[:alert] = 'Oops, you entered the wrong username or password. wah wah.'
-        render :new
-      end
+    if @admin.present? && @admin.authenticate(params[:password])
+      session[:admin_id] = @admin.id
+      flash[:notice] = 'Welcome!'
+      redirect_to admin_path
+    else
+      flash[:alert] = 'Oops, you entered the wrong username or password. wah wah.'
+      render :new
+    end
   end
 
   def destroy
