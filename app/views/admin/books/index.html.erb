@@ -6,6 +6,7 @@
       <%= book.author %>,
       <%= book.date_published %>
       <%= link_to('delete this book', admin_book_path(book.id), method: :delete) %>
+      <%= link_to('edit this book', edit_admin_book_path(book.id)) %>
     </li>
   <% end %>
 </ul>
